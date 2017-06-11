@@ -1,0 +1,735 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS Progress Pie by oliviale</title>
+	<meta name="description" content="A simple CSS progress pie for your simple needs.">
+	<meta name="author" content="Olivia Ng @ github.io/oliviale">
+	<meta name="viewport" content="width=device-width" />
+	<link rel="shortcut icon" href="favicon.png">
+	<link href="https://fonts.googleapis.com/css?family=Hind:400,600|Source+Code+Pro:400" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/progress_pie_color_compiled.css"/>
+	<link rel="stylesheet" href="css/progress_pie_compiled.css"/>
+	<link rel="stylesheet" href="css/progress_pie_unicorn.css"/>
+
+	<style>
+		/* http://meyerweb.com/eric/tools/css/reset/ 
+		   v2.0 | 20110126
+		   License: none (public domain)
+		*/
+
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		html {
+			box-sizing: border-box;
+		}
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+
+		body {
+			font-family: 'Hind', Arial, sans-serif;
+			background: #f8f8f8;
+		}
+		p {
+			font: 400 16px/1.4 'Hind', sans-serif;
+			margin: 0 0 15px;
+		}
+		h1 {
+			font: 600 40px/1.6 'Hind', sans-serif;
+			margin: 20px 0;
+			text-align: center;
+		}
+		h3 {
+			font: 600 25px/1.4 'Hind', sans-serif;
+			margin: 20px 0;
+		}
+		h5 {
+			font: 600 18px/1.4 'Hind', sans-serif;
+			margin: 10px 0;
+		}
+		section {
+			margin: 0 0 20px;
+		    background: #fff;
+		    padding: 1px 20px 10px;
+		    border-radius: 4px;
+		    border: 1px solid #ddd;
+		}
+		footer {
+			padding: 20px;
+			font-size: 14px;
+			text-align: center;
+		}
+		a {
+			text-decoration: none;
+		}
+		.with-line {
+			padding-bottom: 10px;
+			border-bottom: 1px solid #ddd;
+		}
+		.container {
+			margin: 0 auto 2em;
+			width: 100%;
+			max-width: 960px;
+			padding: 20px;
+		}
+		.flex {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.flex-child {
+    		flex: 0 1 100%;
+		}
+		.solo-example, .card-example {
+			border: 1px solid #ddd;
+			box-shadow: 0 1px 0px rgba(0,0,0,0.05);
+			border-radius: 4px;
+			margin: 10px 0;
+			overflow: hidden;
+		}
+		.code-wrapper {
+			flex: 5;
+			padding: 10px;
+		}
+
+		code {
+		    font: 400 16px 'Source Code Pro', 'Courier New', monospace;
+		    padding: 12px;
+		    background: #333;
+		    display: block;
+		    margin: 5px 0 0;
+		    border-radius: 4px;
+		    color: #fff;
+		}
+
+		.solo-example > figure {
+			flex: 1;
+			padding: 10px;
+			text-align: center;
+			background: #f8f8f8;
+			border-left: 1px solid #ddd;
+			border-radius: 0 4px 4px 0;
+		}
+		.solo-example .progress-pie {
+			margin: 0;
+			background-color: #ddd;
+		}
+		.small-text {
+			font-size: 12px;
+			color: #999;
+		}
+		.text-tag {
+			color: rgb(249,38,114);
+		}
+		.code-inline {
+			font-size: 90%;
+		    padding: 2px 4px;
+		    background-color: rgba(249,38,114,0.05);
+		    color: rgb(249,38,114);
+		    vertical-align: top;
+		    border-radius: 4px;
+		    font-family: 'Source Code Pro', 'Courier New', monospace;
+		}
+		.text-att {
+			color: rgb(166,226,46);
+		}
+		.text-attc {
+			color: rgb(230,219,116);
+		}
+		.text-prop {
+			color: rgb(102,217,239);
+		}
+		.text-propc {
+			color: rgb(172,127,243);
+		}
+		.text-comment {
+			color: rgb(117,113,94);
+		}
+		.flex.margin {
+			margin: 0 -15px;
+		}
+		.flex-child.padding {
+			padding: 0 15px;
+		}
+		.card-example {
+			margin-bottom: 30px;
+		}
+		.card-example > figure {
+			text-align: center;
+			padding: 15px;
+			background: #f8f8f8;
+			border-bottom: 1px solid #ddd;
+		}
+		.card-example code {
+			white-space:pre-wrap;
+		}
+		.card-example > figure > div {
+			margin: 0 15px;
+		}
+		.flex-child.half {
+			flex: 1 0 50%;
+		}
+		.flex-child.third {
+			flex: 1 0 33.333333%;
+		}
+
+		.progress-pie.large {
+			width: 90px;
+			height: 90px;
+		}
+
+		.progress-pie.large:after {
+			font: 900 40px/60px Tahoma;
+		}
+
+		.progress-pie.small {
+			width: 40px;
+			height: 40px;
+		}
+
+		.progress-pie.small:after {
+    		font: 900 14px/28px Tahoma;		
+		}
+		
+		.progress-pie-unicorn.thick:after {
+			width: 45%;
+			height: 45%;
+			font: 16px/26px Tahoma;
+			color: #e868a2;
+		}
+		.progress-pie-unicorn.thin:after {
+			width: 90%;
+			height: 90%;
+			font: 26px/55px Tahoma;
+    		color: #f28c33;
+		}
+		.progress-pie-unicorn.dark-ring {
+			background-color: #222;
+		}
+		.progress-pie-unicorn.dark-ring:after {
+			color: #7ec46d;;
+		}
+		.progress-pie-unicorn.gray-ring {
+			background-color: #fff;
+			box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+		}
+		.progress-pie-unicorn.gray-ring:after {
+			box-shadow: inset 1px 0px 3px rgba(0,0,0,0.3);
+			background: #f8f8f8;
+		}
+		.progress-pie-color.dark-theme:after {
+			background-color: #111;
+			color: #ffcf3a;
+		}
+		.progress-pie-unicorn.transparent:after {
+			background: transparent;
+		}
+		.progress-pie.normal-theme:after {
+			font: 700 26px/42px 'Palatino', serif;
+			color: #4CC9D8;
+		}
+		.dark-theme-wrapper {
+			background: #111;
+		    display: inline-block;
+		    padding: 4px 8px;
+		}
+
+		.to-do-list {
+			background: rgb(56,57,70);
+			color: #fff;
+			margin: 10px 0;
+		}
+		.title {
+			background: linear-gradient(to top, rgb(87,151,38) 0%, rgb(132, 198, 40) 100%);
+		    padding: 8px 14px;
+		    box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+		    font: 600 20px 'Hind', sans-serif;
+		    letter-spacing: -.5px;
+		    text-transform: uppercase;
+		}
+		.to-do {
+			padding: 15px;
+		}
+		.to-do:not(:last-of-type) {
+			border-bottom: 1px dashed rgba(0,0,0,0.2);
+		}
+
+		.to-do h5 {
+			text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    		margin: 0;
+    		line-height: 1.1;
+		} 
+
+		.to-do span {
+			font-size: 12px;
+    		color: #999;
+		}
+		.to-do-list .progress-pie {
+			float: right;
+			margin: -3px -2px 0 10px;
+			width: 44px;
+			height: 44px;
+			background: #232326;
+    		background-image: -webkit-linear-gradient(left,transparent 50%,#7fbe29 0);
+    		background-image: linear-gradient(to right,transparent 50%,#7fbe29 0);
+		    box-shadow: 0 1px 1px rgba(255,255,255,0.1);
+		}
+		.to-do-list .progress-pie:after {
+			background-color: #383946;
+		    font: 600 18px/34px 'Hind', sans-serif;
+		    color: #81c228;
+		}
+		.progress-pie[data-value="89"]:before {
+    		background-color: #7fbe29;
+    	}
+    	.profile-card {
+    		background: linear-gradient(to bottom, rgb(255, 78, 80), rgb(249, 212, 35));
+    		border-radius: 10px;
+    		padding: 10px;
+    		text-align: center;
+			box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+			margin: 10px 0;
+    	}
+    	.profile-card > div {
+    		border-radius: 5px;
+    		background: #fff;
+    		padding: 20px 20px 10px ;
+    	}
+    	.profile-card h2 {
+		    font: 400 24px/1.1 'Hind', sans-serif;
+		    text-align: center;
+		    display: block;
+		    flex: 1 100%;
+		    color: rgba(0,0,0,0.5);
+		    margin: 10px 0 15px;
+		    letter-spacing: 2px;
+		    text-transform: uppercase;
+		    background: -webkit-linear-gradient(rgb(255, 78, 80), rgb(249, 212, 35));
+		    -webkit-background-clip: text;
+		    -webkit-text-fill-color: transparent;
+    	}
+    	.profile-card span {
+    		font-size: 12px;
+		    display: block;
+		    color: #999;
+		    margin-bottom: 10px;
+    	}
+    	.profile-card .progress-pie {
+    		width: 55px;
+    		height: 55px;
+		    margin: 5px;
+			transform: rotate(-90deg);
+			background: #ffffff;
+			background-image: linear-gradient(to right,transparent 50%,#ff524f 0);
+			top: 1px;
+    		box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+    	}
+    	.profile-card .progress-pie:after {
+    		font: 400 30px/54px 'Hind', sans-serif;
+    		transform: rotate(90deg);
+    		width: 85%;
+    		height: 85%;
+    	}
+    	.profile-card .progress-pie[data-value="86"]:before, .profile-card .progress-pie[data-value="75"]:before {
+    		background-color: #ff5754;
+    	}
+    	.onboarding {
+		    background: #f8f8f8;
+		    box-shadow: 1px 1px 0px #7d0952, 2px 2px 0px #7d0952, 3px 3px 0px #7d0952, 4px 4px 0px #7d0952, 5px 5px 0px #7d0952, 6px 6px 0px #7d0952;
+		    margin: 10px 6px 16px 00;
+		    border: 1px solid #7d0952;
+    		overflow: hidden;
+    	}
+    	.instruction {
+    		padding: 15px;
+		    background: #ab6491;
+		    position: relative;
+    	}
+    	.instruction .progress-pie {
+    		margin: 0;
+		    position: absolute;
+		    right: 10px;
+		    bottom: -26px;
+		    z-index: 100;
+		    background-color: #ab6491;
+		    background-image: linear-gradient(to right,transparent 50%,#7d0952 0);
+    	}
+    	.instruction .progress-pie:after {
+    		color: #ab6491;
+    	}
+    	.instruction .progress-pie-detail {
+    		position: absolute;
+		    right: 15px;
+		    font-size: 10px;
+		    bottom: -42px;
+		    color: #7d0952;
+    	}
+    	.instruction h2 {
+    		color: #fff;
+		    font-size: 30px;
+		    text-shadow: 2px 2px 0px rgb(125, 9, 82);
+		    font-weight: 600;
+    	}
+    	.form {
+    		padding: 15px 15px 7px;
+    		font-size: 14px;
+    	}
+    	.form p {
+    		padding-right: 80px;
+    		font-size: 14px;
+    	}
+    	.radio {
+    		padding: 5px;
+		    background: #eee;
+		    border: 1px solid #ddd;
+		    margin: 8px 0;
+    	}
+    	.radio span {
+    		vertical-align: middle;
+    		margin-top: 2px;
+    		display: inline-block;
+    	}
+    	input[type="radio"] {
+		    vertical-align: middle;
+		    margin: 3px;
+		}
+		@media screen and (max-width: 768px) {
+			.flex-child.third, .flex-child.half {
+				flex: 0 1 100%;
+			}
+			.profile-card .flex-child {
+				flex: 1 0 50% !important;
+			}
+		}
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<h1>CSS Progress Pie</h1>
+
+	<section>
+		<h3 class="with-line">Default</h3>
+		<div class="solo-example flex">
+			<div class="code-wrapper">
+				<span class="small-text">HTML:</span>
+				<code>
+					<span>&lt;</span><span class="text-tag">div</span>
+					<span class="text-att">class</span><span>=</span><span class="text-attc">"progress-pie"</span>
+					<span class="text-att">data-value</span><span>=</span><span class="text-attc">"93"</span><span>&gt;</span><span>&lt;/</span><span class="text-tag">div</span><span>&gt;</span>
+				</code>
+			</div>
+			<figure>
+				<div class="progress-pie" data-value="93"></div>
+			</figure>
+		</div>
+	</section>
+
+	<section>
+		<h3 class="with-line">Colored</h3>
+		<p>Red for numbers 1 to 40, yellow for 41 to 70 and green for 71 to 100.</p>
+		<div class="solo-example flex">
+			<div class="code-wrapper">
+				<span class="small-text">HTML:</span>
+				<code>
+					<span>&lt;</span><span class="text-tag">div</span>
+					<span class="text-att">class</span><span>=</span><span class="text-attc">"progress-pie-color"</span>
+					<span class="text-att">data-value</span><span>=</span><span class="text-attc">"22"</span><span>&gt;</span><span>&lt;/</span><span class="text-tag">div</span><span>&gt;</span>
+				</code>
+			</div>
+			<figure>
+				<div class="progress-pie-color" data-value="22"></div>
+			</figure>
+		</div>
+		<div class="solo-example flex">
+			<div class="code-wrapper">
+				<span class="small-text">HTML:</span>
+				<code>
+					<span>&lt;</span><span class="text-tag">div</span>
+					<span class="text-att">class</span><span>=</span><span class="text-attc">"progress-pie-color"</span>
+					<span class="text-att">data-value</span><span>=</span><span class="text-attc">"55"</span><span>&gt;</span><span>&lt;/</span><span class="text-tag">div</span><span>&gt;</span>
+				</code>
+			</div>
+			<figure>
+				<div class="progress-pie-color" data-value="55"></div>
+			</figure>
+		</div>
+		<div class="solo-example flex">
+			<div class="code-wrapper">
+				<span class="small-text">HTML:</span>
+				<code>
+					<span>&lt;</span><span class="text-tag">div</span>
+					<span class="text-att">class</span><span>=</span><span class="text-attc">"progress-pie-color"</span>
+					<span class="text-att">data-value</span><span>=</span><span class="text-attc">"93"</span><span>&gt;</span><span>&lt;/</span><span class="text-tag">div</span><span>&gt;</span>
+				</code>
+			</div>
+			<figure>
+				<div class="progress-pie-color" data-value="93"></div>
+			</figure>
+		</div>
+	</section>
+
+	<section>
+		<h3 class="with-line">Use Cases</h3>
+		<div class="flex margin">
+			<div class="flex-child third padding">
+				<div class="to-do-list">
+					<div class="title">A Fancy To-Do List</div>
+					<div class="to-do">
+						<div class="progress-pie" data-value="89"></div>
+						<h5>Finish this page</h5>
+						<span>You're almost there!</span>
+					</div>
+					<div class="to-do">
+						<div class="progress-pie" data-value="46"></div>
+						<h5>Tea time: Chocolate cake & green tea latte</h5>
+						<span>Halfway through...</span>
+					</div>
+					<div class="to-do">
+						<div class="progress-pie" data-value="23"></div>
+						<h5>Check #Slack Messages</h5>
+						<span>Slow progress. Have you been slacking? Ha-ha. Get it?</span>
+					</div>
+				</div>
+			</div>
+			<div class="flex-child third padding">
+				<div class="onboarding">
+					<div class="instruction">
+						<div class="progress-pie" data-value="50"></div>
+						<div class="progress-pie-detail">% Complete</div>
+						<h2>Keep going...</h2>
+					</div>
+					<div class="form">
+						<p>Answer the question below truthfully.</p>
+						<div>Which was your starter Pokemon?</div>
+						<div class="radio">
+							<label>
+						    	<input type="radio" name="pokemon" value="bulba"/>
+						    	<span>Bulbasaur</span>
+						 	</label>
+						</div>
+						<div class="radio">
+							<label>
+						    	<input type="radio" name="pokemon" value="squir"/>
+						    	<span>Squirtle</span>
+						 	</label>
+						</div>
+						<div class="radio">
+							<label>
+						    	<input type="radio" name="pokemon" value="char"/>
+						    	<span>Charmander</span>
+						 	</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex-child third padding">
+				<div class="profile-card">
+					<div class="flex">
+						<h2>Meme Skills</h2>
+						<div class="flex-child half">
+							<div class="progress-pie" data-value="86"></div>
+							<span>Understanding</span>
+						</div>
+						<div class="flex-child half">
+							<div class="progress-pie" data-value="75"></div>
+							<span>Integrating</span>
+						</div>
+						<div class="flex-child half">
+							<div class="progress-pie" data-value="13"></div>
+							<span>Making</span>
+						</div>
+						<div class="flex-child half">
+							<div class="progress-pie" data-value="25"></div>
+							<span>Dreaming</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<h3 id="styling" class="with-line">Styling</h3>
+		<div class="flex margin">
+			<div class="flex-child full padding">
+				<h5>Color</h5>
+				<p>It is advised to make your changes in the SCSS file and compile it to CSS. <br>Otherwise, please make good use of your Find All + Replace option.</p>
+				<div class="card-example">
+					<figure>
+						<div class="progress-pie-unicorn" data-value="63"></div>
+						<div class="progress-pie-unicorn" data-value="73"></div>
+						<div class="progress-pie-unicorn" data-value="55"></div>
+						<div class="progress-pie-unicorn" data-value="93"></div>
+					</figure>
+					<div class="code-wrapper">
+						<span class="small-text">SCSS:</span>
+						<code><span class="text-att">.progress-pie</span> {
+    <span class="text-prop">background-image</span>: <span class="text-prop">linear-gradient</span>(<span class="text-tag">to</span> <span class="text-prop">right</span>, <span class="text-prop">transparent</span> <span class="text-propc">50</span><span class="text-tag">%</span>, <span class="text-propc">#bf62a6</span> 0);
+}
+
+@for $i from 51 through 100 {
+    .progress-pie[data-value="#{$i}"]:before {
+        <span class="text-prop">background-color</span>: <span class="text-propc">#bf62a6</span>;
+    }
+}</code>
+					</div>
+				</div>
+
+			</div>
+			<div class="flex-child half padding">
+				<h5>Color of passive ring</h5>
+				<p>Changes are made to the <span class="code-inline">background-color</span> property of <span class="code-inline">.progress-pie</span>.
+				<div class="card-example">
+					<figure>
+						<div class="progress-pie-unicorn dark-ring" data-value="45"></div>
+						<div class="progress-pie-unicorn gray-ring" data-value="56"></div>
+					</figure>
+					<div class="code-wrapper">
+						<span class="small-text">CSS:</span>
+						<code><span class="text-att">.progress-pie-unicorn.dark-ring</span> {
+    <span class="text-prop">background-color</span>: <span class="text-propc">#222</span>;
+}
+
+<span class="text-comment">// white-ring with box shadow</span>
+<span class="text-att">.progress-pie.gray-ring</span> {
+	<span class="text-prop">background-color</span>: <span class="text-propc">#fff</span>;
+	<span class="text-prop">box-shadow</span>: <span class="text-propc">0</span><span class="text-tag">px</span> <span class="text-propc">0</span><span class="text-tag">px</span> <span class="text-propc">8</span><span class="text-tag">px</span> <span class="text-prop">rgba</span>(<span class="text-propc">0</span>, <span class="text-propc">0</span>, <span class="text-propc">0</span>, <span class="text-propc">0.3</span>);
+}
+<span class="text-att">.progress-pie.gray-ring</span>:after {
+	<span class="text-prop">box-shadow</span>: <span class="text-prop">inset</span> <span class="text-propc">1</span><span class="text-tag">px</span> <span class="text-propc">0</span><span class="text-tag">px</span> <span class="text-propc">3</span><span class="text-tag">px</span> <span class="text-prop">rgba</span>(<span class="text-propc">0</span>,<span class="text-propc">0</span>,<span class="text-propc">0</span>,<span class="text-propc">0.3</span>);
+}</code>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="flex-child half padding">
+				<h5>Inner background, font and color of text</h5>
+				<p>Changes are made to the <span class="code-inline">:after</span> pseudo-element of <span class="code-inline">.progress-pie</span>.
+				<div class="card-example">
+					<figure>
+						<div class="dark-theme-wrapper">
+							<div class="progress-pie-color dark-theme" data-value="50"></div>
+						</div>
+						<div class="progress-pie normal-theme" data-value="93"></div>
+						<div class="progress-pie-unicorn transparent" data-value="65"></div>
+					</figure>
+					<div class="code-wrapper">
+						<span class="small-text">CSS:</span>
+						<code><span class="text-att">.progress-pie.dark-theme</span>:after {
+    <span class="text-prop">background</span>: <span class="text-propc">#111</span>;
+    <span class="text-prop">color</span>: <span class="text-propc">#ffcf3a</span>;
+}
+
+<span class="text-comment">// changing font</span>
+<span class="text-att">.progress-pie.normal-theme</span>:after {
+    <span class="text-prop">font</span>: <span class="text-propc">700</span> <span class="text-propc">26</span><span class="text-tag">px</span>/<span class="text-propc">42</span><span class="text-tag">px</span> <span class="text-attc">'Palatino'</span>, <span class="text-prop">serif</span>;
+}	
+
+<span class="text-comment">// using a transparent background works</span>
+<span class="text-att">.progress-pie.transparent</span>:after {
+    <span class="text-prop">background</span>: <span class="text-prop">transparent</span>;
+}</code>
+					</div>
+				</div>
+
+			</div>
+			<div class="flex-child half padding">
+				<h5>Size of pie</h5>
+				<p>The pie must always be a square, i.e. the height and width must be the same.</p>
+				<p>Do note that if you adjust the size too much, you will need to adjust the font size as well. Balance.</p>
+				<div class="card-example">
+					<figure>
+						<div class="progress-pie large" data-value="23"></div>
+						<div class="progress-pie small" data-value="63"></div>
+					</figure>
+					<div class="code-wrapper">
+						<span class="small-text">CSS:</span>
+						<code><span class="text-att">.progress-pie.large</span> {
+    <span class="text-prop">width</span>: <span class="text-propc">90</span><span class="text-tag">px</span>;
+    <span class="text-prop">height</span>: <span class="text-propc">90</span><span class="text-tag">px</span>;
+}
+
+<span class="text-att">.progress-pie.small</span> {
+    <span class="text-prop">width</span>: <span class="text-propc">40</span><span class="text-tag">px</span>;
+    <span class="text-prop">height</span>: <span class="text-propc">40</span><span class="text-tag">px</span>;
+}</code>
+					</div>
+				</div>
+
+			</div>
+			<div class="flex-child half padding">
+				<h5>Size of ring</h5>
+				<p>Change the size of ring by adjusting the width and height of the text overlap. The width and height must also be the same.</p>
+				<p>Do note that if you adjust the size too much, you will need to adjust the font size as well. Balance.</p>
+				<div class="card-example">
+					<figure>
+						<div class="progress-pie-unicorn thick" data-value="90"></div>
+						<div class="progress-pie-unicorn thin" data-value="78"></div>
+					</figure>
+					<div class="code-wrapper">
+						<span class="small-text">CSS:</span>
+						<code><span class="text-att">.progress-pie.thick</span>:after {
+    <span class="text-prop">width</span>: <span class="text-propc">45</span><span class="text-tag">%</span>;
+    <span class="text-prop">height</span>: <span class="text-propc">45</span><span class="text-tag">%</span>;
+}
+
+<span class="text-att">.progress-pie.thin</span>:after {
+    <span class="text-prop">width</span>: <span class="text-propc">90</span><span class="text-tag">%</span>;
+    <span class="text-prop">height</span>: <span class="text-propc">90</span><span class="text-tag">%</span>;
+}</code>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<footer>
+	&copy; 2017&emsp;oliviale&emsp;<a href="https://github.com/oliviale/CSS-Progress-Pie" target="_blank">View on GitHub</a>
+	</footer>
+</div>
+</body>
