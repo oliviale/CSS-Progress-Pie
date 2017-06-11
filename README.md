@@ -3,23 +3,28 @@ This is a progress pie done in CSS. It came about when I needed a simple progres
 
 ## Examples
 
+[See here for examples and use cases](http://github.io/oliviale/css-progress-pie)
+
 ![CSS Progress Pie examples](images/example.png)
 
-[See here for examples](http://github.io/oliviale/css-progress-pie)
 
 ## How To Use
-1. Download the CSS/SCSS file and include it in your `<head>`. There are two kinds - default (single color) or multi-colored with red, yellow and green for the numbers 1-40, 41-70 and 71-100 respectively.
+1. Download the CSS or SCSS file and include it in your `<head>`. 
+
+There are two kinds - default (single color) or colored with red, yellow and green for the numbers 1 to 40, 41 to 70 and 71 to 100 respectively.
 ``` html
 <link rel="stylesheet" href="css/progress_pie_compiled.css"/>
 ```
-2. HTML structure
+2. HTML structure with `data-value` being a number from 1 to 100.
 ``` html
 <div class="progress-pie" data-value="50"></div>
+<div class="progress-pie-color" data-value="80"></div>
 ```
 3. Uh... that's it.
 
+
 ## Changing colors, fonts, etc.
-Manually change the properties of the CSS code. Your life will be easier if you use the SCSS file instead of the pure CSS file as you would need to alter for every `data-value`.
+Manually change the properties of the CSS code. [More details here](http://github.io/oliviale/css-progress-pie#styling).
 
 ## Playground
 [Play around in this Codepen](https://codepen.io/oliviale/pen/YqEgPw)
