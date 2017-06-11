@@ -3,7 +3,7 @@ This is a progress pie done in CSS. It came about when I needed a simple progres
 
 ## Examples
 
-[See here for examples and use cases](http://github.io/oliviale/css-progress-pie)
+[See here for examples and use cases](https://oliviale.github.io/CSS-Progress-Pie/)
 
 ![CSS Progress Pie examples](images/example.png)
 
@@ -24,7 +24,7 @@ There are two kinds - default (single color) or colored with red, yellow and gre
 
 
 ## Changing colors, fonts, etc.
-Manually change the properties of the CSS code. [More details here](http://github.io/oliviale/css-progress-pie#styling).
+Manually change the properties of the CSS code. [More details here](https://oliviale.github.io/CSS-Progress-Pie/#styling).
 
 ## Playground
 [Play around in this Codepen](https://codepen.io/oliviale/pen/YqEgPw)
