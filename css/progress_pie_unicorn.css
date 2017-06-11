@@ -1,0 +1,1102 @@
+/* CSS Progress Pie by Olivia Ng | MIT License | github.com/oliviale/css-progress-pie*/
+/* For site examples - ignore */
+.progress-pie-unicorn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #eee;
+  position: relative;
+  display: inline-block;
+}
+
+.progress-pie-unicorn::before {
+  content: '';
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 100% 100% 0 / 50%;
+  background-color: inherit;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+}
+
+.progress-pie-unicorn::after {
+  content: attr(data-value);
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  margin: auto;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  font: 900 20px/41px Tahoma;
+}
+
+.progress-pie-unicorn[data-value="0"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="0"]:before {
+  -webkit-transform: rotate(0turn);
+      -ms-transform: rotate(0turn);
+          transform: rotate(0turn);
+}
+
+.progress-pie-unicorn[data-value="1"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="1"]:before {
+  -webkit-transform: rotate(0.01turn);
+      -ms-transform: rotate(0.01turn);
+          transform: rotate(0.01turn);
+}
+
+.progress-pie-unicorn[data-value="2"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="2"]:before {
+  -webkit-transform: rotate(0.02turn);
+      -ms-transform: rotate(0.02turn);
+          transform: rotate(0.02turn);
+}
+
+.progress-pie-unicorn[data-value="3"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="3"]:before {
+  -webkit-transform: rotate(0.03turn);
+      -ms-transform: rotate(0.03turn);
+          transform: rotate(0.03turn);
+}
+
+.progress-pie-unicorn[data-value="4"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="4"]:before {
+  -webkit-transform: rotate(0.04turn);
+      -ms-transform: rotate(0.04turn);
+          transform: rotate(0.04turn);
+}
+
+.progress-pie-unicorn[data-value="5"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="5"]:before {
+  -webkit-transform: rotate(0.05turn);
+      -ms-transform: rotate(0.05turn);
+          transform: rotate(0.05turn);
+}
+
+.progress-pie-unicorn[data-value="6"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="6"]:before {
+  -webkit-transform: rotate(0.06turn);
+      -ms-transform: rotate(0.06turn);
+          transform: rotate(0.06turn);
+}
+
+.progress-pie-unicorn[data-value="7"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="7"]:before {
+  -webkit-transform: rotate(0.07turn);
+      -ms-transform: rotate(0.07turn);
+          transform: rotate(0.07turn);
+}
+
+.progress-pie-unicorn[data-value="8"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="8"]:before {
+  -webkit-transform: rotate(0.08turn);
+      -ms-transform: rotate(0.08turn);
+          transform: rotate(0.08turn);
+}
+
+.progress-pie-unicorn[data-value="9"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="9"]:before {
+  -webkit-transform: rotate(0.09turn);
+      -ms-transform: rotate(0.09turn);
+          transform: rotate(0.09turn);
+}
+
+.progress-pie-unicorn[data-value="10"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="10"]:before {
+  -webkit-transform: rotate(0.1turn);
+      -ms-transform: rotate(0.1turn);
+          transform: rotate(0.1turn);
+}
+
+.progress-pie-unicorn[data-value="11"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="11"]:before {
+  -webkit-transform: rotate(0.11turn);
+      -ms-transform: rotate(0.11turn);
+          transform: rotate(0.11turn);
+}
+
+.progress-pie-unicorn[data-value="12"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="12"]:before {
+  -webkit-transform: rotate(0.12turn);
+      -ms-transform: rotate(0.12turn);
+          transform: rotate(0.12turn);
+}
+
+.progress-pie-unicorn[data-value="13"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="13"]:before {
+  -webkit-transform: rotate(0.13turn);
+      -ms-transform: rotate(0.13turn);
+          transform: rotate(0.13turn);
+}
+
+.progress-pie-unicorn[data-value="14"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="14"]:before {
+  -webkit-transform: rotate(0.14turn);
+      -ms-transform: rotate(0.14turn);
+          transform: rotate(0.14turn);
+}
+
+.progress-pie-unicorn[data-value="15"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="15"]:before {
+  -webkit-transform: rotate(0.15turn);
+      -ms-transform: rotate(0.15turn);
+          transform: rotate(0.15turn);
+}
+
+.progress-pie-unicorn[data-value="16"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="16"]:before {
+  -webkit-transform: rotate(0.16turn);
+      -ms-transform: rotate(0.16turn);
+          transform: rotate(0.16turn);
+}
+
+.progress-pie-unicorn[data-value="17"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="17"]:before {
+  -webkit-transform: rotate(0.17turn);
+      -ms-transform: rotate(0.17turn);
+          transform: rotate(0.17turn);
+}
+
+.progress-pie-unicorn[data-value="18"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="18"]:before {
+  -webkit-transform: rotate(0.18turn);
+      -ms-transform: rotate(0.18turn);
+          transform: rotate(0.18turn);
+}
+
+.progress-pie-unicorn[data-value="19"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="19"]:before {
+  -webkit-transform: rotate(0.19turn);
+      -ms-transform: rotate(0.19turn);
+          transform: rotate(0.19turn);
+}
+
+.progress-pie-unicorn[data-value="20"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #78c5d6 0);
+  background-image: linear-gradient(to right, transparent 50%, #78c5d6 0);
+}
+.progress-pie-unicorn[data-value="20"]:before {
+  -webkit-transform: rotate(0.2turn);
+      -ms-transform: rotate(0.2turn);
+          transform: rotate(0.2turn);
+}
+
+.progress-pie-unicorn[data-value="21"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="21"]:before {
+  -webkit-transform: rotate(0.21turn);
+      -ms-transform: rotate(0.21turn);
+          transform: rotate(0.21turn);
+}
+
+.progress-pie-unicorn[data-value="22"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="22"]:before {
+  -webkit-transform: rotate(0.22turn);
+      -ms-transform: rotate(0.22turn);
+          transform: rotate(0.22turn);
+}
+
+.progress-pie-unicorn[data-value="23"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="23"]:before {
+  -webkit-transform: rotate(0.23turn);
+      -ms-transform: rotate(0.23turn);
+          transform: rotate(0.23turn);
+}
+
+.progress-pie-unicorn[data-value="24"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="24"]:before {
+  -webkit-transform: rotate(0.24turn);
+      -ms-transform: rotate(0.24turn);
+          transform: rotate(0.24turn);
+}
+
+.progress-pie-unicorn[data-value="25"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="25"]:before {
+  -webkit-transform: rotate(0.25turn);
+      -ms-transform: rotate(0.25turn);
+          transform: rotate(0.25turn);
+}
+
+.progress-pie-unicorn[data-value="26"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="26"]:before {
+  -webkit-transform: rotate(0.26turn);
+      -ms-transform: rotate(0.26turn);
+          transform: rotate(0.26turn);
+}
+
+.progress-pie-unicorn[data-value="27"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="27"]:before {
+  -webkit-transform: rotate(0.27turn);
+      -ms-transform: rotate(0.27turn);
+          transform: rotate(0.27turn);
+}
+
+.progress-pie-unicorn[data-value="28"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="28"]:before {
+  -webkit-transform: rotate(0.28turn);
+      -ms-transform: rotate(0.28turn);
+          transform: rotate(0.28turn);
+}
+
+.progress-pie-unicorn[data-value="29"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="29"]:before {
+  -webkit-transform: rotate(0.29turn);
+      -ms-transform: rotate(0.29turn);
+          transform: rotate(0.29turn);
+}
+
+.progress-pie-unicorn[data-value="30"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="30"]:before {
+  -webkit-transform: rotate(0.3turn);
+      -ms-transform: rotate(0.3turn);
+          transform: rotate(0.3turn);
+}
+
+.progress-pie-unicorn[data-value="31"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="31"]:before {
+  -webkit-transform: rotate(0.31turn);
+      -ms-transform: rotate(0.31turn);
+          transform: rotate(0.31turn);
+}
+
+.progress-pie-unicorn[data-value="32"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="32"]:before {
+  -webkit-transform: rotate(0.32turn);
+      -ms-transform: rotate(0.32turn);
+          transform: rotate(0.32turn);
+}
+
+.progress-pie-unicorn[data-value="33"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="33"]:before {
+  -webkit-transform: rotate(0.33turn);
+      -ms-transform: rotate(0.33turn);
+          transform: rotate(0.33turn);
+}
+
+.progress-pie-unicorn[data-value="34"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="34"]:before {
+  -webkit-transform: rotate(0.34turn);
+      -ms-transform: rotate(0.34turn);
+          transform: rotate(0.34turn);
+}
+
+.progress-pie-unicorn[data-value="35"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="35"]:before {
+  -webkit-transform: rotate(0.35turn);
+      -ms-transform: rotate(0.35turn);
+          transform: rotate(0.35turn);
+}
+
+.progress-pie-unicorn[data-value="36"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="36"]:before {
+  -webkit-transform: rotate(0.36turn);
+      -ms-transform: rotate(0.36turn);
+          transform: rotate(0.36turn);
+}
+
+.progress-pie-unicorn[data-value="37"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="37"]:before {
+  -webkit-transform: rotate(0.37turn);
+      -ms-transform: rotate(0.37turn);
+          transform: rotate(0.37turn);
+}
+
+.progress-pie-unicorn[data-value="38"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="38"]:before {
+  -webkit-transform: rotate(0.38turn);
+      -ms-transform: rotate(0.38turn);
+          transform: rotate(0.38turn);
+}
+
+.progress-pie-unicorn[data-value="39"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="39"]:before {
+  -webkit-transform: rotate(0.39turn);
+      -ms-transform: rotate(0.39turn);
+          transform: rotate(0.39turn);
+}
+
+.progress-pie-unicorn[data-value="40"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #459ba8 0);
+  background-image: linear-gradient(to right, transparent 50%, #459ba8 0);
+}
+.progress-pie-unicorn[data-value="40"]:before {
+  -webkit-transform: rotate(0.4turn);
+      -ms-transform: rotate(0.4turn);
+          transform: rotate(0.4turn);
+}
+
+.progress-pie-unicorn[data-value="41"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #79c267 0);
+  background-image: linear-gradient(to right, transparent 50%, #79c267 0);
+}
+.progress-pie-unicorn[data-value="41"]:before {
+  -webkit-transform: rotate(0.41turn);
+      -ms-transform: rotate(0.41turn);
+          transform: rotate(0.41turn);
+}
+
+.progress-pie-unicorn[data-value="42"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #79c267 0);
+  background-image: linear-gradient(to right, transparent 50%, #79c267 0);
+}
+.progress-pie-unicorn[data-value="42"]:before {
+  -webkit-transform: rotate(0.42turn);
+      -ms-transform: rotate(0.42turn);
+          transform: rotate(0.42turn);
+}
+
+.progress-pie-unicorn[data-value="43"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #79c267 0);
+  background-image: linear-gradient(to right, transparent 50%, #79c267 0);
+}
+.progress-pie-unicorn[data-value="43"]:before {
+  -webkit-transform: rotate(0.43turn);
+      -ms-transform: rotate(0.43turn);
+          transform: rotate(0.43turn);
+}
+
+.progress-pie-unicorn[data-value="44"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #79c267 0);
+  background-image: linear-gradient(to right, transparent 50%, #79c267 0);
+}
+.progress-pie-unicorn[data-value="44"]:before {
+  -webkit-transform: rotate(0.44turn);
+      -ms-transform: rotate(0.44turn);
+          transform: rotate(0.44turn);
+}
+
+.progress-pie-unicorn[data-value="45"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #79c267 0);
+  background-image: linear-gradient(to right, transparent 50%, #79c267 0);
+}
+.progress-pie-unicorn[data-value="45"]:before {
+  -webkit-transform: rotate(0.45turn);
+      -ms-transform: rotate(0.45turn);
+          transform: rotate(0.45turn);
+}
+
+.progress-pie-unicorn[data-value="46"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #79c267 0);
+  background-image: linear-gradient(to right, transparent 50%, #79c267 0);
+}
+.progress-pie-unicorn[data-value="46"]:before {
+  -webkit-transform: rotate(0.46turn);
+      -ms-transform: rotate(0.46turn);
+          transform: rotate(0.46turn);
+}
+
+.progress-pie-unicorn[data-value="47"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #79c267 0);
+  background-image: linear-gradient(to right, transparent 50%, #79c267 0);
+}
+.progress-pie-unicorn[data-value="47"]:before {
+  -webkit-transform: rotate(0.47turn);
+      -ms-transform: rotate(0.47turn);
+          transform: rotate(0.47turn);
+}
+
+.progress-pie-unicorn[data-value="48"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #79c267 0);
+  background-image: linear-gradient(to right, transparent 50%, #79c267 0);
+}
+.progress-pie-unicorn[data-value="48"]:before {
+  -webkit-transform: rotate(0.48turn);
+      -ms-transform: rotate(0.48turn);
+          transform: rotate(0.48turn);
+}
+
+.progress-pie-unicorn[data-value="49"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #79c267 0);
+  background-image: linear-gradient(to right, transparent 50%, #79c267 0);
+}
+.progress-pie-unicorn[data-value="49"]:before {
+  -webkit-transform: rotate(0.49turn);
+      -ms-transform: rotate(0.49turn);
+          transform: rotate(0.49turn);
+}
+
+.progress-pie-unicorn[data-value="50"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #79c267 0);
+  background-image: linear-gradient(to right, transparent 50%, #79c267 0);
+}
+.progress-pie-unicorn[data-value="50"]:before {
+  -webkit-transform: rotate(0.5turn);
+      -ms-transform: rotate(0.5turn);
+          transform: rotate(0.5turn);
+}
+
+.progress-pie-unicorn[data-value="51"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #c5d647 0);
+  background-image: linear-gradient(to right, transparent 50%, #c5d647 0);
+}
+.progress-pie-unicorn[data-value="51"]:before {
+  background-color: #c5d647;
+  -webkit-transform: rotate(0.01turn);
+      -ms-transform: rotate(0.01turn);
+          transform: rotate(0.01turn);
+}
+
+.progress-pie-unicorn[data-value="52"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #c5d647 0);
+  background-image: linear-gradient(to right, transparent 50%, #c5d647 0);
+}
+.progress-pie-unicorn[data-value="52"]:before {
+  background-color: #c5d647;
+  -webkit-transform: rotate(0.02turn);
+      -ms-transform: rotate(0.02turn);
+          transform: rotate(0.02turn);
+}
+
+.progress-pie-unicorn[data-value="53"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #c5d647 0);
+  background-image: linear-gradient(to right, transparent 50%, #c5d647 0);
+}
+.progress-pie-unicorn[data-value="53"]:before {
+  background-color: #c5d647;
+  -webkit-transform: rotate(0.03turn);
+      -ms-transform: rotate(0.03turn);
+          transform: rotate(0.03turn);
+}
+
+.progress-pie-unicorn[data-value="54"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #c5d647 0);
+  background-image: linear-gradient(to right, transparent 50%, #c5d647 0);
+}
+.progress-pie-unicorn[data-value="54"]:before {
+  background-color: #c5d647;
+  -webkit-transform: rotate(0.04turn);
+      -ms-transform: rotate(0.04turn);
+          transform: rotate(0.04turn);
+}
+
+.progress-pie-unicorn[data-value="55"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #c5d647 0);
+  background-image: linear-gradient(to right, transparent 50%, #c5d647 0);
+}
+.progress-pie-unicorn[data-value="55"]:before {
+  background-color: #c5d647;
+  -webkit-transform: rotate(0.05turn);
+      -ms-transform: rotate(0.05turn);
+          transform: rotate(0.05turn);
+}
+
+.progress-pie-unicorn[data-value="56"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #c5d647 0);
+  background-image: linear-gradient(to right, transparent 50%, #c5d647 0);
+}
+.progress-pie-unicorn[data-value="56"]:before {
+  background-color: #c5d647;
+  -webkit-transform: rotate(0.06turn);
+      -ms-transform: rotate(0.06turn);
+          transform: rotate(0.06turn);
+}
+
+.progress-pie-unicorn[data-value="57"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #c5d647 0);
+  background-image: linear-gradient(to right, transparent 50%, #c5d647 0);
+}
+.progress-pie-unicorn[data-value="57"]:before {
+  background-color: #c5d647;
+  -webkit-transform: rotate(0.07turn);
+      -ms-transform: rotate(0.07turn);
+          transform: rotate(0.07turn);
+}
+
+.progress-pie-unicorn[data-value="58"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #c5d647 0);
+  background-image: linear-gradient(to right, transparent 50%, #c5d647 0);
+}
+.progress-pie-unicorn[data-value="58"]:before {
+  background-color: #c5d647;
+  -webkit-transform: rotate(0.08turn);
+      -ms-transform: rotate(0.08turn);
+          transform: rotate(0.08turn);
+}
+
+.progress-pie-unicorn[data-value="59"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #c5d647 0);
+  background-image: linear-gradient(to right, transparent 50%, #c5d647 0);
+}
+.progress-pie-unicorn[data-value="59"]:before {
+  background-color: #c5d647;
+  -webkit-transform: rotate(0.09turn);
+      -ms-transform: rotate(0.09turn);
+          transform: rotate(0.09turn);
+}
+
+.progress-pie-unicorn[data-value="60"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #c5d647 0);
+  background-image: linear-gradient(to right, transparent 50%, #c5d647 0);
+}
+.progress-pie-unicorn[data-value="60"]:before {
+  background-color: #c5d647;
+  -webkit-transform: rotate(0.1turn);
+      -ms-transform: rotate(0.1turn);
+          transform: rotate(0.1turn);
+}
+
+.progress-pie-unicorn[data-value="61"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f5d63d 0);
+  background-image: linear-gradient(to right, transparent 50%, #f5d63d 0);
+}
+.progress-pie-unicorn[data-value="61"]:before {
+  background-color: #f5d63d;
+  -webkit-transform: rotate(0.11turn);
+      -ms-transform: rotate(0.11turn);
+          transform: rotate(0.11turn);
+}
+
+.progress-pie-unicorn[data-value="62"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f5d63d 0);
+  background-image: linear-gradient(to right, transparent 50%, #f5d63d 0);
+}
+.progress-pie-unicorn[data-value="62"]:before {
+  background-color: #f5d63d;
+  -webkit-transform: rotate(0.12turn);
+      -ms-transform: rotate(0.12turn);
+          transform: rotate(0.12turn);
+}
+
+.progress-pie-unicorn[data-value="63"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f5d63d 0);
+  background-image: linear-gradient(to right, transparent 50%, #f5d63d 0);
+}
+.progress-pie-unicorn[data-value="63"]:before {
+  background-color: #f5d63d;
+  -webkit-transform: rotate(0.13turn);
+      -ms-transform: rotate(0.13turn);
+          transform: rotate(0.13turn);
+}
+
+.progress-pie-unicorn[data-value="64"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f5d63d 0);
+  background-image: linear-gradient(to right, transparent 50%, #f5d63d 0);
+}
+.progress-pie-unicorn[data-value="64"]:before {
+  background-color: #f5d63d;
+  -webkit-transform: rotate(0.14turn);
+      -ms-transform: rotate(0.14turn);
+          transform: rotate(0.14turn);
+}
+
+.progress-pie-unicorn[data-value="65"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f5d63d 0);
+  background-image: linear-gradient(to right, transparent 50%, #f5d63d 0);
+}
+.progress-pie-unicorn[data-value="65"]:before {
+  background-color: #f5d63d;
+  -webkit-transform: rotate(0.15turn);
+      -ms-transform: rotate(0.15turn);
+          transform: rotate(0.15turn);
+}
+
+.progress-pie-unicorn[data-value="66"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f5d63d 0);
+  background-image: linear-gradient(to right, transparent 50%, #f5d63d 0);
+}
+.progress-pie-unicorn[data-value="66"]:before {
+  background-color: #f5d63d;
+  -webkit-transform: rotate(0.16turn);
+      -ms-transform: rotate(0.16turn);
+          transform: rotate(0.16turn);
+}
+
+.progress-pie-unicorn[data-value="67"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f5d63d 0);
+  background-image: linear-gradient(to right, transparent 50%, #f5d63d 0);
+}
+.progress-pie-unicorn[data-value="67"]:before {
+  background-color: #f5d63d;
+  -webkit-transform: rotate(0.17turn);
+      -ms-transform: rotate(0.17turn);
+          transform: rotate(0.17turn);
+}
+
+.progress-pie-unicorn[data-value="68"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f5d63d 0);
+  background-image: linear-gradient(to right, transparent 50%, #f5d63d 0);
+}
+.progress-pie-unicorn[data-value="68"]:before {
+  background-color: #f5d63d;
+  -webkit-transform: rotate(0.18turn);
+      -ms-transform: rotate(0.18turn);
+          transform: rotate(0.18turn);
+}
+
+.progress-pie-unicorn[data-value="69"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f5d63d 0);
+  background-image: linear-gradient(to right, transparent 50%, #f5d63d 0);
+}
+.progress-pie-unicorn[data-value="69"]:before {
+  background-color: #f5d63d;
+  -webkit-transform: rotate(0.19turn);
+      -ms-transform: rotate(0.19turn);
+          transform: rotate(0.19turn);
+}
+
+.progress-pie-unicorn[data-value="70"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f5d63d 0);
+  background-image: linear-gradient(to right, transparent 50%, #f5d63d 0);
+}
+.progress-pie-unicorn[data-value="70"]:before {
+  background-color: #f5d63d;
+  -webkit-transform: rotate(0.2turn);
+      -ms-transform: rotate(0.2turn);
+          transform: rotate(0.2turn);
+}
+
+.progress-pie-unicorn[data-value="71"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f28c33 0);
+  background-image: linear-gradient(to right, transparent 50%, #f28c33 0);
+}
+.progress-pie-unicorn[data-value="71"]:before {
+  background-color: #f28c33;
+  -webkit-transform: rotate(0.21turn);
+      -ms-transform: rotate(0.21turn);
+          transform: rotate(0.21turn);
+}
+
+.progress-pie-unicorn[data-value="72"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f28c33 0);
+  background-image: linear-gradient(to right, transparent 50%, #f28c33 0);
+}
+.progress-pie-unicorn[data-value="72"]:before {
+  background-color: #f28c33;
+  -webkit-transform: rotate(0.22turn);
+      -ms-transform: rotate(0.22turn);
+          transform: rotate(0.22turn);
+}
+
+.progress-pie-unicorn[data-value="73"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f28c33 0);
+  background-image: linear-gradient(to right, transparent 50%, #f28c33 0);
+}
+.progress-pie-unicorn[data-value="73"]:before {
+  background-color: #f28c33;
+  -webkit-transform: rotate(0.23turn);
+      -ms-transform: rotate(0.23turn);
+          transform: rotate(0.23turn);
+}
+
+.progress-pie-unicorn[data-value="74"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f28c33 0);
+  background-image: linear-gradient(to right, transparent 50%, #f28c33 0);
+}
+.progress-pie-unicorn[data-value="74"]:before {
+  background-color: #f28c33;
+  -webkit-transform: rotate(0.24turn);
+      -ms-transform: rotate(0.24turn);
+          transform: rotate(0.24turn);
+}
+
+.progress-pie-unicorn[data-value="75"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f28c33 0);
+  background-image: linear-gradient(to right, transparent 50%, #f28c33 0);
+}
+.progress-pie-unicorn[data-value="75"]:before {
+  background-color: #f28c33;
+  -webkit-transform: rotate(0.25turn);
+      -ms-transform: rotate(0.25turn);
+          transform: rotate(0.25turn);
+}
+
+.progress-pie-unicorn[data-value="76"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f28c33 0);
+  background-image: linear-gradient(to right, transparent 50%, #f28c33 0);
+}
+.progress-pie-unicorn[data-value="76"]:before {
+  background-color: #f28c33;
+  -webkit-transform: rotate(0.26turn);
+      -ms-transform: rotate(0.26turn);
+          transform: rotate(0.26turn);
+}
+
+.progress-pie-unicorn[data-value="77"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f28c33 0);
+  background-image: linear-gradient(to right, transparent 50%, #f28c33 0);
+}
+.progress-pie-unicorn[data-value="77"]:before {
+  background-color: #f28c33;
+  -webkit-transform: rotate(0.27turn);
+      -ms-transform: rotate(0.27turn);
+          transform: rotate(0.27turn);
+}
+
+.progress-pie-unicorn[data-value="78"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f28c33 0);
+  background-image: linear-gradient(to right, transparent 50%, #f28c33 0);
+}
+.progress-pie-unicorn[data-value="78"]:before {
+  background-color: #f28c33;
+  -webkit-transform: rotate(0.28turn);
+      -ms-transform: rotate(0.28turn);
+          transform: rotate(0.28turn);
+}
+
+.progress-pie-unicorn[data-value="79"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f28c33 0);
+  background-image: linear-gradient(to right, transparent 50%, #f28c33 0);
+}
+.progress-pie-unicorn[data-value="79"]:before {
+  background-color: #f28c33;
+  -webkit-transform: rotate(0.29turn);
+      -ms-transform: rotate(0.29turn);
+          transform: rotate(0.29turn);
+}
+
+.progress-pie-unicorn[data-value="80"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #f28c33 0);
+  background-image: linear-gradient(to right, transparent 50%, #f28c33 0);
+}
+.progress-pie-unicorn[data-value="80"]:before {
+  background-color: #f28c33;
+  -webkit-transform: rotate(0.3turn);
+      -ms-transform: rotate(0.3turn);
+          transform: rotate(0.3turn);
+}
+
+.progress-pie-unicorn[data-value="81"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #e868a2 0);
+  background-image: linear-gradient(to right, transparent 50%, #e868a2 0);
+}
+.progress-pie-unicorn[data-value="81"]:before {
+  background-color: #e868a2;
+  -webkit-transform: rotate(0.31turn);
+      -ms-transform: rotate(0.31turn);
+          transform: rotate(0.31turn);
+}
+
+.progress-pie-unicorn[data-value="82"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #e868a2 0);
+  background-image: linear-gradient(to right, transparent 50%, #e868a2 0);
+}
+.progress-pie-unicorn[data-value="82"]:before {
+  background-color: #e868a2;
+  -webkit-transform: rotate(0.32turn);
+      -ms-transform: rotate(0.32turn);
+          transform: rotate(0.32turn);
+}
+
+.progress-pie-unicorn[data-value="83"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #e868a2 0);
+  background-image: linear-gradient(to right, transparent 50%, #e868a2 0);
+}
+.progress-pie-unicorn[data-value="83"]:before {
+  background-color: #e868a2;
+  -webkit-transform: rotate(0.33turn);
+      -ms-transform: rotate(0.33turn);
+          transform: rotate(0.33turn);
+}
+
+.progress-pie-unicorn[data-value="84"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #e868a2 0);
+  background-image: linear-gradient(to right, transparent 50%, #e868a2 0);
+}
+.progress-pie-unicorn[data-value="84"]:before {
+  background-color: #e868a2;
+  -webkit-transform: rotate(0.34turn);
+      -ms-transform: rotate(0.34turn);
+          transform: rotate(0.34turn);
+}
+
+.progress-pie-unicorn[data-value="85"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #e868a2 0);
+  background-image: linear-gradient(to right, transparent 50%, #e868a2 0);
+}
+.progress-pie-unicorn[data-value="85"]:before {
+  background-color: #e868a2;
+  -webkit-transform: rotate(0.35turn);
+      -ms-transform: rotate(0.35turn);
+          transform: rotate(0.35turn);
+}
+
+.progress-pie-unicorn[data-value="86"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #e868a2 0);
+  background-image: linear-gradient(to right, transparent 50%, #e868a2 0);
+}
+.progress-pie-unicorn[data-value="86"]:before {
+  background-color: #e868a2;
+  -webkit-transform: rotate(0.36turn);
+      -ms-transform: rotate(0.36turn);
+          transform: rotate(0.36turn);
+}
+
+.progress-pie-unicorn[data-value="87"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #e868a2 0);
+  background-image: linear-gradient(to right, transparent 50%, #e868a2 0);
+}
+.progress-pie-unicorn[data-value="87"]:before {
+  background-color: #e868a2;
+  -webkit-transform: rotate(0.37turn);
+      -ms-transform: rotate(0.37turn);
+          transform: rotate(0.37turn);
+}
+
+.progress-pie-unicorn[data-value="88"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #e868a2 0);
+  background-image: linear-gradient(to right, transparent 50%, #e868a2 0);
+}
+.progress-pie-unicorn[data-value="88"]:before {
+  background-color: #e868a2;
+  -webkit-transform: rotate(0.38turn);
+      -ms-transform: rotate(0.38turn);
+          transform: rotate(0.38turn);
+}
+
+.progress-pie-unicorn[data-value="89"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #e868a2 0);
+  background-image: linear-gradient(to right, transparent 50%, #e868a2 0);
+}
+.progress-pie-unicorn[data-value="89"]:before {
+  background-color: #e868a2;
+  -webkit-transform: rotate(0.39turn);
+      -ms-transform: rotate(0.39turn);
+          transform: rotate(0.39turn);
+}
+
+.progress-pie-unicorn[data-value="90"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #e868a2 0);
+  background-image: linear-gradient(to right, transparent 50%, #e868a2 0);
+}
+.progress-pie-unicorn[data-value="90"]:before {
+  background-color: #e868a2;
+  -webkit-transform: rotate(0.4turn);
+      -ms-transform: rotate(0.4turn);
+          transform: rotate(0.4turn);
+}
+
+.progress-pie-unicorn[data-value="91"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #bf62a6 0);
+  background-image: linear-gradient(to right, transparent 50%, #bf62a6 0);
+}
+.progress-pie-unicorn[data-value="91"]:before {
+  background-color: #bf62a6;
+  -webkit-transform: rotate(0.41turn);
+      -ms-transform: rotate(0.41turn);
+          transform: rotate(0.41turn);
+}
+
+.progress-pie-unicorn[data-value="92"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #bf62a6 0);
+  background-image: linear-gradient(to right, transparent 50%, #bf62a6 0);
+}
+.progress-pie-unicorn[data-value="92"]:before {
+  background-color: #bf62a6;
+  -webkit-transform: rotate(0.42turn);
+      -ms-transform: rotate(0.42turn);
+          transform: rotate(0.42turn);
+}
+
+.progress-pie-unicorn[data-value="93"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #bf62a6 0);
+  background-image: linear-gradient(to right, transparent 50%, #bf62a6 0);
+}
+.progress-pie-unicorn[data-value="93"]:before {
+  background-color: #bf62a6;
+  -webkit-transform: rotate(0.43turn);
+      -ms-transform: rotate(0.43turn);
+          transform: rotate(0.43turn);
+}
+
+.progress-pie-unicorn[data-value="94"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #bf62a6 0);
+  background-image: linear-gradient(to right, transparent 50%, #bf62a6 0);
+}
+.progress-pie-unicorn[data-value="94"]:before {
+  background-color: #bf62a6;
+  -webkit-transform: rotate(0.44turn);
+      -ms-transform: rotate(0.44turn);
+          transform: rotate(0.44turn);
+}
+
+.progress-pie-unicorn[data-value="95"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #bf62a6 0);
+  background-image: linear-gradient(to right, transparent 50%, #bf62a6 0);
+}
+.progress-pie-unicorn[data-value="95"]:before {
+  background-color: #bf62a6;
+  -webkit-transform: rotate(0.45turn);
+      -ms-transform: rotate(0.45turn);
+          transform: rotate(0.45turn);
+}
+
+.progress-pie-unicorn[data-value="96"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #bf62a6 0);
+  background-image: linear-gradient(to right, transparent 50%, #bf62a6 0);
+}
+.progress-pie-unicorn[data-value="96"]:before {
+  background-color: #bf62a6;
+  -webkit-transform: rotate(0.46turn);
+      -ms-transform: rotate(0.46turn);
+          transform: rotate(0.46turn);
+}
+
+.progress-pie-unicorn[data-value="97"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #bf62a6 0);
+  background-image: linear-gradient(to right, transparent 50%, #bf62a6 0);
+}
+.progress-pie-unicorn[data-value="97"]:before {
+  background-color: #bf62a6;
+  -webkit-transform: rotate(0.47turn);
+      -ms-transform: rotate(0.47turn);
+          transform: rotate(0.47turn);
+}
+
+.progress-pie-unicorn[data-value="98"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #bf62a6 0);
+  background-image: linear-gradient(to right, transparent 50%, #bf62a6 0);
+}
+.progress-pie-unicorn[data-value="98"]:before {
+  background-color: #bf62a6;
+  -webkit-transform: rotate(0.48turn);
+      -ms-transform: rotate(0.48turn);
+          transform: rotate(0.48turn);
+}
+
+.progress-pie-unicorn[data-value="99"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #bf62a6 0);
+  background-image: linear-gradient(to right, transparent 50%, #bf62a6 0);
+}
+.progress-pie-unicorn[data-value="99"]:before {
+  background-color: #bf62a6;
+  -webkit-transform: rotate(0.49turn);
+      -ms-transform: rotate(0.49turn);
+          transform: rotate(0.49turn);
+}
+
+.progress-pie-unicorn[data-value="100"] {
+  background-image: -webkit-linear-gradient(left, transparent 50%, #bf62a6 0);
+  background-image: linear-gradient(to right, transparent 50%, #bf62a6 0);
+}
+.progress-pie-unicorn[data-value="100"]:before {
+  background-color: #bf62a6;
+  -webkit-transform: rotate(0.5turn);
+      -ms-transform: rotate(0.5turn);
+          transform: rotate(0.5turn);
+}
+
+.hello {
+box-shadow: 0 1px 1px rgba(0,0,0,0.4);
+}
